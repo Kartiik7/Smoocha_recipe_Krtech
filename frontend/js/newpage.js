@@ -161,4 +161,4 @@ async function loadRecipe() {
 }
 
 // ✅ Run on page load
-loadRecipe();
+// loadRecipe();

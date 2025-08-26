@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    const API_BASE = (window.location.port && window.location.port !== '5000') ? 'http://localhost:5000' : '';
+    const API_BASE = (window.location.port && window.location.port !== '5000') ? 'https://smoocha-recipe-krtech.onrender.com/' : '';
     const form = document.getElementById('suggestForm');
     const msg = document.getElementById('msg');
 

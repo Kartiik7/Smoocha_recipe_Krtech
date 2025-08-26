@@ -161,17 +161,22 @@
     };
 
     // Load data
-    fetch("../data/recipes.json") // <-- adjust path if needed
-        .then(r => {
-            if (!r.ok) throw new Error(`HTTP ${r.status}`);
-            return r.json();
-        })
-        .then(data => renderRecipe(pickRecipe(data)))
-        .catch(err => {
-            console.error("Error fetching recipe(s):", err);
-            const root = bySel(".main-container2");
-            if (root) root.insertAdjacentHTML("afterbegin",
+    fetch("http://localhost:5000/api/recipes")   // ✅ no "/backend/"
+    .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+    })
+    .then(data => {
+        // Assuming you already have functions renderRecipe() & pickRecipe()
+        renderRecipe(pickRecipe(data));
+    })
+    .catch(err => {
+        console.error("Error fetching recipe(s):", err);
+        const root = document.querySelector(".main-container2");
+        if (root) {
+            root.insertAdjacentHTML("afterbegin",
                 `<p style="color:#b00">Failed to load recipes. Check console.</p>`
             );
-        });
+        }
+    });
 })();
