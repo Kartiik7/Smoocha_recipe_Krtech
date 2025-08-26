@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server",
+    "import-recipes": "node importRecipes.js",
+    "start:prod": "node server.js"
+=======
   "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "nodemon server",
   "import-recipes": "node importRecipes.js",
-  "start": "node server.js"
+  "start:prod": "node server.js"
+>>>>>>> ca6e898d31b9d8458364a87d8eefd84ac0568db9
   },
   "keywords": [],
   "author": "",
@@ -20,6 +28,10 @@
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
+<<<<<<< HEAD
+    "mongodb": "^6.18.0",
+=======
+>>>>>>> ca6e898d31b9d8458364a87d8eefd84ac0568db9
     "mongoose": "^8.17.1"
   }
 }
